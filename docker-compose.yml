@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  noscrape-mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ghcr.io/akhilucky/noscrape:latest
+    container_name: noscrape-mcp
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - MCP_PORT=3001
+    restart: unless-stopped
+
+  noscrape-proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile.proxy
+    image: ghcr.io/akhilucky/noscrape-proxy:latest
+    container_name: noscrape-proxy
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=production
+      - PORT=8080
+      - PROXY_TARGET=${PROXY_TARGET:-}
+    restart: unless-stopped

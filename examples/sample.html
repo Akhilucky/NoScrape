@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoScrape Example - Premium Blog Post</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 2rem; line-height: 1.6; }
+    .pricing-table { border-collapse: collapse; width: 100%; margin: 2rem 0; }
+    .pricing-table th, .pricing-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    .pricing-table th { background-color: #f4f4f4; }
+    .premium-badge { background: gold; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+    nav ul { list-style: none; padding: 0; display: flex; gap: 1rem; }
+    nav a { text-decoration: none; color: #333; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #eee; color: #666; }
+    article h1 { font-size: 2em; margin-bottom: 0.5rem; }
+    .meta { color: #666; font-size: 0.9em; margin-bottom: 2rem; }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/pricing">Pricing</a></li>
+      <li><a href="/docs">Documentation</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <h1>Understanding Large Language Model Training Pipelines</h1>
+    <div class="meta">
+      <span class="author">By Dr. Sarah Chen</span>
+      <span class="date">Published: June 10, 2026</span>
+      <span class="premium-badge">Premium Content</span>
+    </div>
+
+    <p>Large language models (LLMs) have transformed the landscape of natural language processing. In this comprehensive guide, we explore the intricate pipeline involved in training these powerful models, from data collection to deployment. Our proprietary research reveals novel optimization techniques that reduce training time by 40%.</p>
+
+    <h2>Data Collection and Curation</h2>
+    <p>The foundation of any LLM is its training data. Modern models are trained on trillions of tokens sourced from diverse domains including web pages, books, academic papers, and code repositories. The data curation process involves deduplication, quality filtering, and privacy redaction. Our research shows that careful data selection can improve model performance by up to 30% while reducing computational requirements.</p>
+    <p>Key considerations in data collection include ensuring diverse representation across languages, domains, and perspectives. We have developed a novel filtering technique that removes low-quality content while preserving valuable training signals. This approach is documented in our research paper.</p>
+
+    <h2>Tokenization Strategies</h2>
+    <p>Tokenization is the first step in converting raw text into a format suitable for model training. Byte-Pair Encoding (BPE) remains the most popular approach, though recent research has explored alternative methods such as Unigram and WordPiece tokenization. Our experiments demonstrate that vocabulary size significantly impacts both training efficiency and model quality, with optimal sizes ranging from 32,000 to 128,000 tokens depending on the application.</p>
+
+    <h2>Architecture Design</h2>
+    <p>The transformer architecture continues to dominate LLM design, with innovations in attention mechanisms driving improvements in both efficiency and capability. Key architectural decisions include model depth, width, attention head count, and feed-forward network dimensions. Our team has developed a novel sparse attention pattern that reduces computational complexity from quadratic to nearly linear while maintaining competitive performance.</p>
+
+    <h2>Training Infrastructure</h2>
+    <p>Training state-of-the-art LLMs requires substantial computational resources. Our training cluster consists of 4,096 GPUs across 512 nodes, connected via high-bandwidth interconnects. We have implemented several optimization techniques including gradient checkpointing, mixed precision training, and pipeline parallelism to maximize hardware utilization.</p>
+  </article>
+
+  <section class="pricing">
+    <h2>Subscription Plans</h2>
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Monthly Price</th>
+          <th>API Calls</th>
+          <th>Support</th>
+          <th>Custom Models</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Starter</td>
+          <td>$49</td>
+          <td>10,000</td>
+          <td>Email</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Professional</td>
+          <td>$199</td>
+          <td>100,000</td>
+          <td>Priority Email</td>
+          <td>Up to 3</td>
+        </tr>
+        <tr>
+          <td>Enterprise</td>
+          <td>$999</td>
+          <td>Unlimited</td>
+          <td>24/7 Phone</td>
+          <td>Unlimited</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="documentation">
+    <h2>API Documentation</h2>
+    <p>The NoScrape API provides endpoints for content protection, threat analysis, and adversarial evaluation. Below is a quick reference for integrating with our system.</p>
+    <pre><code>
+POST /protect
+Content-Type: application/json
+
+{
+  "html": "&lt;html&gt;...&lt;/html&gt;",
+  "url": "https://example.com/page",
+  "headers": {
+    "user-agent": "Mozilla/5.0..."
+  }
+}
+
+Response:
+{
+  "threat_profile": { ... },
+  "protected_html": "&lt;html&gt;...&lt;/html&gt;",
+  "evaluation": { ... }
+}
+    </code></pre>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 NoScrape Technologies. All rights reserved.</p>
+    <p>Contact us at: hello@noscrape.dev | Phone: +1 (555) 123-4567</p>
+    <p><a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
+  </footer>
+</body>
+</html>
